@@ -1,0 +1,32 @@
+{
+  "name": "slate",
+  "version": "3.0.0",
+  "description": "Beautiful API Documentation",
+  "main": "slate.js",
+  "scripts": {
+    "lint": "npx eslint .*.js source/*.js",
+    "lint.app": "npx eslint source/slate/js/app/*.js",
+    "lint.ejs": "npx ejs-lint source/_includes/slate.ejs",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx eleventy --input=source/*.md",
+    "debug": "DEBUG=Eleventy* npx eleventy --dryrun --input=source/*.md",
+    "serve": "npx eleventy --input=source/*.md --serve --port=4567"
+  },
+  "keywords": [
+    "slate",
+    "api",
+    "documentation",
+    "ssg"
+  ],
+  "authors": [
+    "Robert Lord",
+    "Mike Ralphson",
+    "Matthew Peveler"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "cheerio": "^1.0.0-rc.3"
+  }
+}
