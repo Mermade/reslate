@@ -19,7 +19,6 @@ Requires an LTS version of Node.js
 
 ## TODO
 
-* TOC / header `id`s (affects search)
 * Partials (look at `11ty` native methods?)
 
 ## Additional plugin possibilities
