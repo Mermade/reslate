@@ -15,9 +15,7 @@ Proof-of-concept Slate v3 using [eleventy](https://www.11ty.dev/) as the static 
 
 ## TODO
 
-* Language selection
-* Search
-* TOC / header `id`s
+* TOC / header `id`s (affects search)
 * Partials (look at `11ty` native methods?)
 
 ## Additional plugin possibilities
