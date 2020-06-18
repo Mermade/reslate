@@ -1,6 +1,12 @@
 'use strict';
 
 const cheerio = require('cheerio');
+const markdownItAnchor = require('markdown-it-anchor');
+const markdown = require('markdown-it')({
+  html: true,
+  linkify: true,
+  typographer: true
+}).use(markdownItAnchor, {})
 
 function language_array(language_tabs) {
   let result = [];
@@ -70,8 +76,8 @@ function toc_data(content, headingLevel) {
   return result;
 }
 
-function partial(includeName) {
-  return '';
+function md(content) {
+  return markdown.render(content);
 }
 
 module.exports = {
@@ -81,6 +87,6 @@ module.exports = {
   image_tag,
   logo_image_tag,
   toc_data,
-  partial
+  md
 };
 

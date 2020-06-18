@@ -1,7 +1,7 @@
 ---
 title: API Reference
 
-language_tabs: # must be one of https://git.io/vQNgJ
+language_tabs: # must be one of https://prismjs.com/#supported-languages
   - shell
   - ruby
   - python
@@ -12,7 +12,7 @@ toc_footers:
   - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
 
 includes:
-  - errors
+  - errors.md
 
 search: true
 ---

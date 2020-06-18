@@ -14,9 +14,6 @@ License for the specific language governing permissions and limitations
 under the License.
 %>
 <% var language_tabs = language_tabs || []; %>
-<% if (includes) { for (var include in includes) { %>
-  <% content += partial(includes[include]) %>
-<% } } %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -51,7 +48,7 @@ under the License.
         activateLanguage(getLanguageFromQueryString());
       };
     </script>
-    <!-- partial('head') -->
+    <%- include('head.ejs',{}) %>
   </head>
 
   <body <% if (page_classes) {%>class="<%= page_classes %>" <% } %>data-languages="<%- language_array(language_tabs) %>">
@@ -80,6 +77,11 @@ under the License.
         </div>
         <ul class="search-results"></ul>
       <% } %>
+
+      <% if (includes) { for (var partial in includes) { %>
+        <% content+= md(include(includes[partial],{layout: 'markdown'})) %>
+      <% } } %>
+
       <div id="toc" class="toc-list-h1">
 	  	<ul class="toc-list-h1">
         <% for (var h1 of toc_data(content)) { %>
