@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "description": "Beautiful API Documentation",
   "scripts": {
+    "postinstall": "node setup",
     "lint": "npx eslint .*.js source/*.js",
     "lint.app": "npx eslint source/slate/js/app/*.js",
     "lint.ejs": "npx ejs-lint source/_includes/slate.ejs",
@@ -28,6 +29,9 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "cheerio": "^1.0.0-rc.3",
+    "imagesloaded": "^4.1.4",
+    "jquery": "^3.5.1",
+    "lunr": "^2.3.8",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.3.0"
   },

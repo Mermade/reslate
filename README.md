@@ -23,7 +23,6 @@ Requires an LTS version of Node.js
 
 ## TODO
 
-* [ ] Use direct dependencies (somehow) for vendored JS libs?
 * [ ] GitHub emoji shortcuts (as in Shins), yea or nay?
 
 ## Additional plugin possibilities
