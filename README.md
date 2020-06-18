@@ -21,8 +21,13 @@ Requires an LTS version of Node.js
 * To debug: `npm run debug`
 * To serve: `npm run serve` and browse to http://localhost:4567
 
+## TODO
+
+* [ ] GitHub emoji shortcuts (as in Shins), yea or nay?
+
 ## Additional plugin possibilities
 
 * [eleventy-plugin-sass](https://www.npmjs.com/package/eleventy-plugin-sass)
 * [eleventy-plugin-nesting-toc](https://www.npmjs.com/package/eleventy-plugin-nesting-toc)
 * https://prismjs.com/plugins/copy-to-clipboard/
+* https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
