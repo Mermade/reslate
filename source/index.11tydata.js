@@ -16,11 +16,11 @@ function language_array(language_tabs) {
 }
 
 function image_tag(src, alt) {
-  return '<img src="img/'+src+'" alt="'+(alt||'Image')+'">';
+  return '<img src="slate/img/'+src+'" alt="'+(alt||'Image')+'">';
 }
 
 function logo_image_tag() {
-  return '<img src="img/logo.png" alt="Logo" class="logo">';
+  return '<img src="slate/img/logo.png" alt="Logo" class="logo">';
 }
 
 function toc_data(content, headingLevel) {
