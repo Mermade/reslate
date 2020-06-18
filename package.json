@@ -7,7 +7,7 @@
     "lint": "npx eslint .*.js source/*.js",
     "lint.app": "npx eslint source/slate/js/app/*.js",
     "lint.ejs": "npx ejs-lint source/_includes/slate.ejs",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx eleventy --input=source/*.md",
     "build": "npx eleventy --input=source/*.md",
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun --input=source/*.md",
     "serve": "npx eleventy --input=source/*.md --serve --port=4567"
