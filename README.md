@@ -4,6 +4,8 @@ Proof-of-concept Slate v3 using [eleventy](https://www.11ty.dev/) as the static 
 
 ## Install
 
+Requires an LTS version of Node.js
+
 * Clone the repository
 * `npm i`
 
@@ -20,5 +22,5 @@ Proof-of-concept Slate v3 using [eleventy](https://www.11ty.dev/) as the static 
 
 ## Additional plugin possibilities
 
-* `eleventy-plugin-sass`
-* `eleventy-plugin-nesting-toc`
+* [eleventy-plugin-sass](https://www.npmjs.com/package/eleventy-plugin-sass)
+* [eleventy-plugin-nesting-toc](https://www.npmjs.com/package/eleventy-plugin-nesting-toc)
