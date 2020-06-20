@@ -23,6 +23,8 @@ Requires an LTS version of Node.js
 
 ## TODO
 
+* [ ] Build css files from scss (and watch)
+* [ ] Option to use lunr server-side / across multiple files
 * [ ] GitHub emoji shortcuts (as in Shins), yea or nay?
 
 ## Additional plugin possibilities
