@@ -23,13 +23,13 @@ Requires an LTS version of Node.js
 
 ## TODO
 
-* [ ] Build css files from scss (and watch)
-* [ ] Option to use lunr server-side / across multiple files
+* [ ] Fix slate font characters / replace with unicode (see PR #1)
+* [ ] [Watch](https://www.belter.io/eleventy-sass-workflow/) scss files
+* [ ] Option to use lunr server-side / across multiple files [#1006](https://github.com/slatedocs/slate/discussions/1006)
 * [ ] GitHub emoji shortcuts (as in Shins), yea or nay?
+* [ ] Specify additional CSS includes in header?
 
 ## Additional plugin possibilities
 
-* [eleventy-plugin-sass](https://www.npmjs.com/package/eleventy-plugin-sass)
-* [eleventy-plugin-nesting-toc](https://www.npmjs.com/package/eleventy-plugin-nesting-toc)
 * https://prismjs.com/plugins/copy-to-clipboard/
 * https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
