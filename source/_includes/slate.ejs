@@ -39,6 +39,10 @@ under the License.
     <script src="slate/js/app/copy.js"></script>
     <% } %>
     <script type="text/javascript">
+      function adjustLanguageSelectorWidth() {
+        const elem = $('.dark-box > .lang-selector');
+        elem.width(elem.parent().width());
+      }
       $(function() {
         loadToc($('#toc'), '.toc-link', '.toc-list-h2, .toc-list-h3, .toc-list-h4, .toc-list-h5, .toc-list-h6', 10);
         setupLanguages($('body').data('languages'));
@@ -46,6 +50,10 @@ under the License.
           recacheHeights();
           refreshToc();
         });
+        $(window).resize(function() {
+          adjustLanguageSelectorWidth();
+        });
+        adjustLanguageSelectorWidth();
       });
       window.onpopstate = function() {
         activateLanguage(getLanguageFromQueryString());
