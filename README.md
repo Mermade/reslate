@@ -30,5 +30,4 @@ Requires an LTS version of Node.js
 
 ## Additional plugin possibilities
 
-* https://prismjs.com/plugins/copy-to-clipboard/
 * https://www.11ty.dev/docs/config/#transforms-example-minify-html-output

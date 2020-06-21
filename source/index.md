@@ -15,6 +15,7 @@ includes:
   - errors.md
 
 search: true
+code_clipboard: true
 ---
 
 # Introduction

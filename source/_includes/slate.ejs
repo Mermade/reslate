@@ -33,7 +33,10 @@ under the License.
     <script src="slate/js/app/lang.js"></script>
     <script src="slate/js/app/toc.js"></script>
     <% if (search) { %>
-      <script src="slate/js/app/search.js"></script>
+    <script src="slate/js/app/search.js"></script>
+    <% } %>
+    <% if (code_clipboard) { %>
+    <script src="slate/js/app/copy.js"></script>
     <% } %>
     <script type="text/javascript">
       $(function() {
