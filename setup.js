@@ -3,6 +3,10 @@
 const fs = require('fs');
 const path = require('path');
 
+// vendored dependencies:
+// https://github.com/davidcalhoun/energize.js
+// https://github.com/bartaz/sandbox.js/blob/master/jquery.highlight.js
+
 // TODO remove any existing symlinks before recreating them
 
 try {
