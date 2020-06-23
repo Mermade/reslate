@@ -2,17 +2,22 @@
   "name": "@slatedocs/slate",
   "version": "3.0.0",
   "description": "Beautiful API Documentation",
+  "main": "./slate.js",
+  "bin": "./slate.js",
   "scripts": {
     "postinstall": "node setup",
     "lint": "npx eslint .*.js source/*.js",
     "lint.app": "npx eslint source/slate/js/app/*.js",
     "lint.ejs": "npx ejs-lint source/_includes/slate.ejs",
     "test": "npx eleventy --input=source/*.md",
-    "build.sass": "npx sass --update --style compressed --no-source-map source/slate/css",
-    "build.11t": "npx eleventy --input=source/*.md",
-    "build": "npm run build.sass && npm run build.11t",
+    "build.sass": "npx sass --update --style compressed --no-source-map ./source/slate/css",
+    "build.sass.local": "npx sass --update --style compressed --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
+    "build.11ty": "npx eleventy --input=./source/*.md",
+    "build.local": "npm run build.sass.local && npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site",
+    "build": "npm run build.sass && npm run build.11ty",
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun --input=source/*.md",
-    "serve": "npm run build.sass && npx eleventy --input=source/*.md --serve --port=4567"
+    "serve": "npm run build.sass && npx eleventy --input=source/*.md --serve --port=4567",
+    "serve.local": "npm run build.sass.local && npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site --serve --port=4567"
   },
   "keywords": [
     "slate",
@@ -36,7 +41,8 @@
     "lunr": "^2.3.8",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.3.0",
-    "sass": "^1.26.9"
+    "sass": "^1.26.9",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {},
   "repository": {
