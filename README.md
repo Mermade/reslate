@@ -1,8 +1,10 @@
 # Slate v3 POC
 
-![Build](https://github.com/slatedocs/slate3/workflows/Build/badge.svg)
+![Build](https://github.com/Mermade/slant/workflows/Build/badge.svg)
 
 Proof-of-concept Slate v3 using [eleventy](https://www.11ty.dev/) as the static site generator.
+
+![screenshot](https://github.com/Mermade/slant/blob/main/docs/screenshot.jpg?raw=true)
 
 ## Features
 

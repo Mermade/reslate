@@ -1,5 +1,5 @@
 {
-  "name": "@slatedocs/slate",
+  "name": "@mermade/slant",
   "version": "3.0.0",
   "description": "Beautiful API Documentation",
   "main": "./slate.js",
@@ -47,10 +47,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/slatedocs/slate3.git"
+    "url": "git+https://github.com/Mermade/slant.git"
   },
   "bugs": {
-    "url": "https://github.com/slatedocs/slate3/issues"
+    "url": "https://github.com/Mermade/slant/issues"
   },
-  "homepage": "https://github.com/slatedocs/slate3#readme"
+  "homepage": "https://github.com/Mermade/slant#readme"
 }
