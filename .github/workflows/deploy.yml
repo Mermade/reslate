@@ -20,9 +20,9 @@ jobs:
     - run: npm i
     - run: npm run lint
     - run: npm run build
-    - run: cp -p node_modules/imagesloaded/imagesloaded.pkgd.min.js _site/slate/js/lib/
-    - run: cp -p node_modules/jquery/dist/jquery.min.js _site/slate/js/lib/
-    - run: cp -p node_modules/lunr/lunr.min.js _site/slate/js/lib/
+    - run: cp -p --remove-destination node_modules/imagesloaded/imagesloaded.pkgd.min.js _site/slate/js/lib/
+    - run: cp -p --remove-destination node_modules/jquery/dist/jquery.min.js _site/slate/js/lib/
+    - run: cp -p --remove-destination node_modules/lunr/lunr.min.js _site/slate/js/lib/
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
