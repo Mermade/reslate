@@ -38,7 +38,7 @@
     "cheerio": "^1.0.0-rc.3",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.5.1",
-    "lunr": "^2.3.8",
+    "lunr": "^2.3.9",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.3.0",
     "sass": "^1.26.10",
