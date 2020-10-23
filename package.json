@@ -33,7 +33,7 @@
   "license": "Apache-2.0",
   "private": true,
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.2",
     "cheerio": "^1.0.0-rc.3",
     "imagesloaded": "^4.1.4",
