@@ -41,7 +41,7 @@
     "lunr": "^2.3.9",
     "markdown-it": "^12.0.2",
     "markdown-it-anchor": "^6.0.0",
-    "sass": "^1.26.10",
+    "sass": "^1.27.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {},
