@@ -1,9 +1,9 @@
 {
-  "name": "@mermade/slant",
-  "version": "3.0.0",
+  "name": "reslate",
+  "version": "3.0.0-0",
   "description": "Beautiful API Documentation",
-  "main": "./slate.js",
-  "bin": "./slate.js",
+  "main": "./reslate.js",
+  "bin": "./reslate.js",
   "scripts": {
     "postinstall": "node setup",
     "lint": "npx eslint .*.js source/*.js",
@@ -47,10 +47,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mermade/slant.git"
+    "url": "git+https://github.com/Mermade/reslate.git"
   },
   "bugs": {
-    "url": "https://github.com/Mermade/slant/issues"
+    "url": "https://github.com/Mermade/reslate/issues"
   },
-  "homepage": "https://github.com/Mermade/slant#readme"
+  "homepage": "https://github.com/Mermade/reslate#readme"
 }
