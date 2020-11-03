@@ -44,7 +44,9 @@
     "sass": "^1.28.0",
     "shelljs": "^0.8.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^8.2.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Mermade/reslate.git"
