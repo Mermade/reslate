@@ -17,7 +17,7 @@ function compare(a, b) {
 
 describe('reslate tests', () => {
   it('build artefacts should match golden', () => {
-    cp.spawnSync('npm',[ 'run', 'build.local' ], { stdio: 'inherit', cwd: __dirname, env });
+    cp.spawnSync('npm',[ 'run', 'build.test' ], { stdio: 'inherit', cwd: __dirname, env });
     compare('./_site/index.html','test/golden/index.html');
     compare('./_site/slate/css/print.css','test/golden/print.css');
     compare('./_site/slate/css/screen.css','test/golden/screen.css');
