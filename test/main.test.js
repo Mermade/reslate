@@ -21,6 +21,6 @@ describe('reslate tests', () => {
     compare('./_site/index.html','test/golden/index.html');
     compare('./_site/slate/css/print.css','test/golden/print.css');
     compare('./_site/slate/css/screen.css','test/golden/screen.css');
-  }).timeout(10000);
+  }).timeout(20000);
 });
 
