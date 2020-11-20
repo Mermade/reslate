@@ -43,7 +43,7 @@
     "jquery": "^3.5.1",
     "lunr": "^2.3.9",
     "markdown-it": "^12.0.2",
-    "markdown-it-anchor": "^6.0.0",
+    "markdown-it-anchor": "^6.0.1",
     "sass": "^1.29.0",
     "shelljs": "^0.8.4"
   },
