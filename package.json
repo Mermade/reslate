@@ -44,7 +44,8 @@
     "markdown-it": "^12.0.2",
     "markdown-it-anchor": "^6.0.1",
     "sass": "^1.29.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "cross-var": "^1.1.0"
   },
   "devDependencies": {
     "mocha": "^8.2.1"
