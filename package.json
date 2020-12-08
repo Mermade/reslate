@@ -12,15 +12,15 @@
     "make": "npx eleventy --input=source/*.md",
     "test": "npx mocha",
     "build.sass": "npx sass --update --style compressed --no-source-map ./source/slate/css",
-    "build.sass.local": "npx sass --update --style compressed --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
-    "build.sass.test": "npx sass --update --style expanded --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
+    "build.sass.local": "cross-var npx sass --update --style compressed --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
+    "build.sass.test": "cross-var npx sass --update --style expanded --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
     "build.11ty": "npx eleventy --input=./source/*.md",
-    "build.local": "npm run build.sass.local && npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site",
-    "build.test": "npm run build.sass.test && npx eleventy --input=$SLATEDIR/*.md --output=./_site",
+    "build.local": "npm run build.sass.local && cross-var npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site",
+    "build.test": "npm run build.sass.test && cross-var npx eleventy --input=$SLATEDIR/*.md --output=./_site",
     "build": "npm run build.sass && npm run build.11ty",
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun --input=source/*.md",
     "serve": "npm run build.sass && npx eleventy --input=source/*.md --serve --port=4567",
-    "serve.local": "npm run build.sass.local && npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site --serve --port=4567"
+    "serve.local": "cross-var npm run build.sass.local && npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site --serve --port=4567"
   },
   "keywords": [
     "slate",
