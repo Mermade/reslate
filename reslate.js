@@ -9,8 +9,8 @@ const sh = require('shelljs');
 
 // path.relative is to work around https://github.com/11ty/eleventy/issues/1100
 const env = Object.assign({}, process.env, {
-  'SLATEDIR': path.relative(__dirname, process.cwd()),
-  'NODE_PATH': path.resolve(__dirname, './node_modules')
+  'SLATEDIR': path.relative(__dirname, process.cwd()).replace(new RegExp('\\' + path.sep, 'g'), '/'),
+  'NODE_PATH': path.resolve(__dirname, './node_modules').replace(new RegExp('\\' + path.sep, 'g'), '/')
 });
 
 if (process.argv[2] === 'init') {
