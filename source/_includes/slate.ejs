@@ -35,7 +35,7 @@ under the License.
     <% if (search) { %>
     <script src="slate/js/app/search.js"></script>
     <% } %>
-    <% if (code_clipboard) { %>
+    <% if (typeof code_clipboard === 'boolean' && code_clipboard) { %>
     <script src="slate/js/app/copy.js"></script>
     <% } %>
     <script type="text/javascript">
