@@ -38,14 +38,14 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "cheerio": "^1.0.0-rc.3",
+    "cross-var": "^1.1.0",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.5.1",
     "lunr": "^2.3.9",
-    "markdown-it": "^12.0.2",
+    "markdown-it": "^12.0.3",
     "markdown-it-anchor": "^6.0.1",
-    "sass": "^1.29.0",
-    "shelljs": "^0.8.4",
-    "cross-var": "^1.1.0"
+    "sass": "^1.30.0",
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "mocha": "^8.2.1"
