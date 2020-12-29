@@ -1,6 +1,6 @@
 {
   "name": "reslate",
-  "version": "3.0.0-2",
+  "version": "3.0.0-3",
   "description": "Beautiful API Documentation",
   "main": "./reslate.js",
   "bin": "./reslate.js",
