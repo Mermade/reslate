@@ -147,7 +147,7 @@ under the License.
         }
       });
     });
-    if (setupCodeCopy) setupCodeCopy();
+    if (typeof setupCodeCopy !== 'undefined') setupCodeCopy();
 
     var defaultLanguage = localStorage.getItem("language");
 
