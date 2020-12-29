@@ -6,6 +6,7 @@
   "bin": "./reslate.js",
   "scripts": {
     "postinstall": "node setup",
+    "setup": "node setup",
     "lint": "npx eslint .*.js source/*.js",
     "lint.app": "npx eslint source/slate/js/app/*.js",
     "lint.ejs": "npx ejs-lint source/_includes/slate.ejs",
