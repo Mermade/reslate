@@ -21,6 +21,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - run: npx package-lock-audit ./package-lock.json
     - run: npm i
     - run: npm run lint
     - run: npm run test
