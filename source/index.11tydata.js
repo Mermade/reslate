@@ -2,11 +2,13 @@
 
 const cheerio = require('cheerio');
 const markdownItAnchor = require('markdown-it-anchor');
+const markdownItPrism = require('markdown-it-prism');
 const markdown = require('markdown-it')({
   html: true,
   linkify: true,
   typographer: true
 }).use(markdownItAnchor, {})
+  .use(markdownItPrism)
 
 function language_array(language_tabs) {
   let result = [];
