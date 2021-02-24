@@ -38,7 +38,10 @@
       $toc.find(tocLinkSelector).each(function() {
         var targetId = $(this).attr('href');
         if ((targetId[0] === "#") && (targetId !== "#")) {
-          headerHeights[targetId] = $(targetId).offset().top;
+          try {
+            headerHeights[targetId] = $(targetId).offset().top;
+          }
+          catch (ex) { console.log('Not caching height of',targetId,ex.message) };
         }
       });
     };
