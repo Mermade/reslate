@@ -36,21 +36,21 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
-    "cheerio": "^1.0.0-rc.3",
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.1",
+    "cheerio": "^1.0.0-rc.9",
     "cross-var": "^1.1.0",
     "imagesloaded": "^4.1.4",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.0",
     "lunr": "^2.3.9",
-    "markdown-it": "^12.0.3",
-    "markdown-it-anchor": "^7.0.0",
-    "markdown-it-prism": "^2.1.4",
-    "sass": "^1.30.0",
+    "markdown-it": "^12.0.6",
+    "markdown-it-anchor": "^7.1.0",
+    "markdown-it-prism": "^2.1.6",
+    "sass": "^1.34.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "mocha": "^8.2.1"
+    "mocha": "^8.4.0"
   },
   "repository": {
     "type": "git",
