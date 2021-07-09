@@ -25,8 +25,7 @@ module.exports = function(eleventyConfig) {
       linkify: true,
       typographer: true
     }).use(markdownItAnchor, {
-        slugify: slugify,
+        slugify: slugify
     })
   );
 };
-
