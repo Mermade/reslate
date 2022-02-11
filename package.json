@@ -47,7 +47,8 @@
     "markdown-it-anchor": "^7.1.0",
     "markdown-it-prism": "^2.1.6",
     "sass": "^1.34.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "slugify": "^1.6.5"
   },
   "devDependencies": {
     "mocha": "^9.0.1"
