@@ -1,9 +1,26 @@
+/* eslint-disable strict */
+/* eslint-disable linebreak-style */
 function copyToClipboard(container) {
   const el = document.createElement('textarea');
-  el.value = container.textContent.replace(/\n$/, '');
+  el.value = container.textContent.replace(/\r(?=\n$)/gm, '');
   document.body.appendChild(el);
-  el.select();
-  document.execCommand('copy');
+  // Technique from https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#using_the_clipboard_api
+  function updateClipboard(newClip) {
+    navigator.clipboard.writeText(newClip).then(function() {
+      /* clipboard successfully set */
+    }, function() {
+      /* clipboard write failed */
+      el.select();
+      document.execCommand('copy');
+    });
+  }
+  navigator.permissions.query({name: "clipboard-write"}).then(result => {
+    if (result.state == "granted" || result.state == "prompt") {
+      /* write to the clipboard now */
+        updateClipboard(el.value);
+    }
+  });
+
   document.body.removeChild(el);
 }
 
