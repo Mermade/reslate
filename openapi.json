@@ -1,0 +1,1648 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Analytics API",
+      "description": "Includes all API endpoints for data analytics.",
+      "version": "1"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:7101"
+      }
+    ],
+    "paths": {
+      "/v1/balance/search": {
+        "post": {
+          "tags": [
+            "Accounts"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Accounts",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/AccountBalanceReportModelEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/balance/download": {
+        "post": {
+          "tags": [
+            "Accounts"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Download Account Balances",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DownloadResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/bank-transactions/search": {
+        "post": {
+          "tags": [
+            "BankTransactions"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Bank Transactions",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BankTransactionsResponseEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/bank-transactions/{id}": {
+        "get": {
+          "tags": [
+            "BankTransactions"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Bank Transaction",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "description": "",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BankTransactionResponse"
+                  },
+                  "example": {"id":"4873a037963341e0b5f9de6b8260b8b2","entityStatus":0,"userId":null,"entityId":null,"airslipUserType":"Unknown","integrationId":"","bankTransactionId":"","transactionHash":null,"bankId":"","emailAddress":"","authorisedDate":null,"capturedDate":0,"amount":0,"currencyCode":null,"description":"","addressLine":null,"lastCardDigits":null,"isoFamilyCode":null,"proprietaryCode":null,"transactionIdentifier":null,"reference":null,"dataSource":"Unknown","timeStamp":1650894459678,"year":null,"month":null,"day":null,"traceInfo":"Id: 4873a037963341e0b5f9de6b8260b8b2, EntityId: , AirslipUserType: Unknown, IntegrationId: "}
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/commerce/search": {
+        "post": {
+          "tags": [
+            "Commerce"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Commerce Accounts",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CommerceProviderModelEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/commerce/download": {
+        "post": {
+          "tags": [
+            "Commerce"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Download Commerce Accounts",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DownloadResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/reports/bank-transactions": {
+        "post": {
+          "tags": [
+            "Report"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Bank Transactions Report",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BankTransactionReportModelEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/reports/bank-transactions/download": {
+        "post": {
+          "tags": [
+            "Report"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Download Bank Transactions",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BankTransactionReportModelEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/reports/commerce-transactions": {
+        "post": {
+          "tags": [
+            "Report"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Commerce Transactions",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/CommerceTransactionReportModelEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/reports/commerce-transactions/download": {
+        "post": {
+          "tags": [
+            "Report"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Commerce Transactions Download",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedDataSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/BankTransactionReportModelEntitySearchResponse"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/snapshot/{snapshotType}": {
+        "post": {
+          "tags": [
+            "Snapshot"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Snapshot",
+          "parameters": [
+            {
+              "name": "snapshotType",
+              "in": "path",
+              "description": "A parameter description should go here",
+              "required": true,
+              "schema": {
+                "$ref": "#/components/schemas/DashboardSnapshotType"
+              }
+            },
+            {
+              "name": "dayRange",
+              "in": "query",
+              "description": "A parameter description should go here",
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "default": 7
+              }
+            },
+            {
+              "name": "statRange",
+              "in": "query",
+              "description": "A parameter description should go here",
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "default": 10
+              }
+            },
+            {
+              "name": "integrationId",
+              "in": "query",
+              "description": "A parameter description should go here",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedSnapshotSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DashboardSnapshotModel"
+                  },
+                  "example": {"balance":2.0,"timeStamp":1650894459694,"movement":0.02,"metrics":[{"timeStamp":1650894459694,"balance":25.3}],"dayRange":1}
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/snapshot/revenue": {
+        "post": {
+          "tags": [
+            "Snapshot"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Revenue",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedSeriesSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DashboardGraphSeriesModel"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/snapshot/cashflow": {
+        "post": {
+          "tags": [
+            "Snapshot"
+          ],
+          "summary": "A description about a specific API should go here",
+          "operationId": "Get Cashflow",
+          "requestBody": {
+            "description": "A parameter description should go here",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/OwnedSeriesSearchModel"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Success",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DashboardGraphSeriesModel"
+                  }
+                }
+              }
+            },
+            "400": {
+              "description": "Bad Request",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/ErrorResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "AccountBalanceReportModel": {
+          "required": [
+            "accountStatus",
+            "balance",
+            "currencyCode",
+            "entityStatus",
+            "integrationProviderId",
+            "updatedOn"
+          ],
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "nullable": true
+            },
+            "integrationProviderId": {
+              "type": "string"
+            },
+            "accountStatus": {
+              "$ref": "#/components/schemas/BankingAccountStatus"
+            },
+            "sortCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "accountNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "currencyCode": {
+              "type": "string"
+            },
+            "balance": {
+              "type": "number",
+              "format": "double"
+            },
+            "updatedOn": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "additionalProperties": false
+        },
+        "AccountBalanceReportModelEntitySearchResponse": {
+          "required": [
+            "paging",
+            "results"
+          ],
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/AccountBalanceReportModel"
+              }
+            },
+            "paging": {
+              "$ref": "#/components/schemas/EntitySearchPagingModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "AirslipUserType": {
+          "enum": [
+            "Unknown",
+            "Standard",
+            "Merchant",
+            "Unregistered",
+            "Partner",
+            "Administrator",
+            "InternalApi"
+          ],
+          "type": "string"
+        },
+        "AuthenticationState": {
+          "enum": [
+            "NotAuthenticated",
+            "Authenticating",
+            "Authenticated"
+          ],
+          "type": "string"
+        },
+        "BankTransactionReportModel": {
+          "required": [
+            "amount",
+            "bankId",
+            "bankTransactionId",
+            "capturedDate",
+            "dataSource",
+            "description",
+            "emailAddress",
+            "entityStatus",
+            "integrationId",
+            "timeStamp",
+            "tradingName"
+          ],
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "nullable": true
+            },
+            "bankTransactionId": {
+              "type": "string"
+            },
+            "transactionHash": {
+              "type": "string",
+              "nullable": true
+            },
+            "integrationId": {
+              "type": "string"
+            },
+            "bankId": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string"
+            },
+            "authorisedDate": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            },
+            "capturedDate": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "amount": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "currencyCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": {
+              "type": "string"
+            },
+            "addressLine": {
+              "type": "string",
+              "nullable": true
+            },
+            "lastCardDigits": {
+              "type": "string",
+              "nullable": true
+            },
+            "isoFamilyCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "proprietaryCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "transactionIdentifier": {
+              "type": "string",
+              "nullable": true
+            },
+            "reference": {
+              "type": "string",
+              "nullable": true
+            },
+            "dataSource": {
+              "$ref": "#/components/schemas/DataSources"
+            },
+            "timeStamp": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "year": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "month": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "day": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "tradingName": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "BankTransactionReportModelEntitySearchResponse": {
+          "required": [
+            "paging",
+            "results"
+          ],
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BankTransactionReportModel"
+              }
+            },
+            "paging": {
+              "$ref": "#/components/schemas/EntitySearchPagingModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "BankTransactionResponse": {
+          "required": [
+            "airslipUserType",
+            "amount",
+            "bankId",
+            "bankTransactionId",
+            "capturedDate",
+            "dataSource",
+            "description",
+            "emailAddress",
+            "entityStatus",
+            "integrationId",
+            "timeStamp",
+            "traceInfo"
+          ],
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "nullable": true
+            },
+            "userId": {
+              "type": "string",
+              "nullable": true
+            },
+            "entityId": {
+              "type": "string",
+              "nullable": true
+            },
+            "airslipUserType": {
+              "$ref": "#/components/schemas/AirslipUserType"
+            },
+            "integrationId": {
+              "type": "string"
+            },
+            "bankTransactionId": {
+              "type": "string"
+            },
+            "transactionHash": {
+              "type": "string",
+              "nullable": true
+            },
+            "bankId": {
+              "type": "string"
+            },
+            "emailAddress": {
+              "type": "string"
+            },
+            "authorisedDate": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            },
+            "capturedDate": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "amount": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "currencyCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": {
+              "type": "string"
+            },
+            "addressLine": {
+              "type": "string",
+              "nullable": true
+            },
+            "lastCardDigits": {
+              "type": "string",
+              "nullable": true
+            },
+            "isoFamilyCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "proprietaryCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "transactionIdentifier": {
+              "type": "string",
+              "nullable": true
+            },
+            "reference": {
+              "type": "string",
+              "nullable": true
+            },
+            "dataSource": {
+              "$ref": "#/components/schemas/DataSources"
+            },
+            "timeStamp": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "year": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "month": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "day": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "traceInfo": {
+              "type": "string",
+              "readOnly": true
+            }
+          },
+          "additionalProperties": false
+        },
+        "BankTransactionsResponse": {
+          "required": [
+            "bankTransactions"
+          ],
+          "type": "object",
+          "properties": {
+            "bankTransactions": {
+              "$ref": "#/components/schemas/BankTransactionResponse"
+            }
+          },
+          "additionalProperties": false
+        },
+        "BankTransactionsResponseEntitySearchResponse": {
+          "required": [
+            "paging",
+            "results"
+          ],
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/BankTransactionsResponse"
+              }
+            },
+            "paging": {
+              "$ref": "#/components/schemas/EntitySearchPagingModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "BankingAccountStatus": {
+          "enum": [
+            "Active",
+            "Expired"
+          ],
+          "type": "string"
+        },
+        "CommerceProviderModel": {
+          "required": [
+            "authenticationState",
+            "entityStatus",
+            "integrationProviderId",
+            "name",
+            "timeStamp"
+          ],
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "nullable": true
+            },
+            "integrationProviderId": {
+              "type": "string"
+            },
+            "authenticationState": {
+              "$ref": "#/components/schemas/AuthenticationState"
+            },
+            "name": {
+              "type": "string"
+            },
+            "timeStamp": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          "additionalProperties": false
+        },
+        "CommerceProviderModelEntitySearchResponse": {
+          "required": [
+            "paging",
+            "results"
+          ],
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CommerceProviderModel"
+              }
+            },
+            "paging": {
+              "$ref": "#/components/schemas/EntitySearchPagingModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "CommerceTransactionReportModel": {
+          "required": [
+            "dataSource",
+            "entityStatus",
+            "orderStatus",
+            "paymentStatus",
+            "timeStamp",
+            "trackingId"
+          ],
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "nullable": true
+            },
+            "dataSource": {
+              "$ref": "#/components/schemas/DataSources"
+            },
+            "timeStamp": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "trackingId": {
+              "type": "string"
+            },
+            "internalId": {
+              "type": "string",
+              "nullable": true
+            },
+            "source": {
+              "type": "string",
+              "nullable": true
+            },
+            "transactionNumber": {
+              "type": "string",
+              "nullable": true
+            },
+            "refundCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "datetime": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "storeLocationId": {
+              "type": "string",
+              "nullable": true
+            },
+            "storeAddress": {
+              "type": "string",
+              "nullable": true
+            },
+            "onlinePurchase": {
+              "type": "boolean",
+              "nullable": true
+            },
+            "subtotal": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            },
+            "serviceCharge": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            },
+            "total": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            },
+            "currencyCode": {
+              "type": "string",
+              "nullable": true
+            },
+            "customerEmail": {
+              "type": "string",
+              "nullable": true
+            },
+            "operatorName": {
+              "type": "string",
+              "nullable": true
+            },
+            "date": {
+              "type": "string",
+              "format": "date-time",
+              "nullable": true
+            },
+            "time": {
+              "type": "string",
+              "nullable": true
+            },
+            "till": {
+              "type": "string",
+              "nullable": true
+            },
+            "number": {
+              "type": "string",
+              "nullable": true
+            },
+            "store": {
+              "type": "string",
+              "nullable": true
+            },
+            "description": {
+              "type": "string",
+              "nullable": true
+            },
+            "year": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "month": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "day": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "totalRefund": {
+              "type": "integer",
+              "format": "int64",
+              "nullable": true
+            },
+            "orderStatus": {
+              "type": "string"
+            },
+            "paymentStatus": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "CommerceTransactionReportModelEntitySearchResponse": {
+          "required": [
+            "paging",
+            "results"
+          ],
+          "type": "object",
+          "properties": {
+            "results": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/CommerceTransactionReportModel"
+              }
+            },
+            "paging": {
+              "$ref": "#/components/schemas/EntitySearchPagingModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "DashboardGraphSeriesModel": {
+          "required": [
+            "endDate",
+            "series",
+            "startDate"
+          ],
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "type": "string"
+            },
+            "endDate": {
+              "type": "string"
+            },
+            "series": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Series"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "DashboardSnapshotModel": {
+          "required": [
+            "balance",
+            "dayRange",
+            "metrics",
+            "movement",
+            "timeStamp"
+          ],
+          "type": "object",
+          "properties": {
+            "balance": {
+              "type": "number",
+              "description": "A description about the property should go here",
+              "format": "double"
+            },
+            "timeStamp": {
+              "type": "integer",
+              "description": "A description about the property should go here",
+              "format": "int64"
+            },
+            "movement": {
+              "type": "number",
+              "description": "A description about the property should go here",
+              "format": "double"
+            },
+            "metrics": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SnapshotMetric"
+              },
+              "description": "A description about the property should go here"
+            },
+            "dayRange": {
+              "type": "integer",
+              "description": "A description about the property should go here",
+              "format": "int32"
+            }
+          },
+          "additionalProperties": false
+        },
+        "DashboardSnapshotType": {
+          "enum": [
+            "TotalSales",
+            "TotalRefunds",
+            "CurrentBalance"
+          ],
+          "type": "string"
+        },
+        "DataSources": {
+          "enum": [
+            "Yapily",
+            "Api2Cart",
+            "SwanRetail",
+            "CustomerPortal",
+            "Analytics",
+            "QrMatching",
+            "SmartReceipts",
+            "MockData",
+            "Unknown"
+          ],
+          "type": "string"
+        },
+        "DownloadResponse": {
+          "required": [
+            "fileContent",
+            "fileName",
+            "mediaType"
+          ],
+          "type": "object",
+          "properties": {
+            "fileName": {
+              "type": "string"
+            },
+            "fileContent": {
+              "type": "string",
+              "format": "byte"
+            },
+            "mediaType": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "EntitySearchModel": {
+          "required": [
+            "items",
+            "linkOperator"
+          ],
+          "type": "object",
+          "properties": {
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/SearchFilterModel"
+              }
+            },
+            "linkOperator": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "EntitySearchPagingModel": {
+          "required": [
+            "next",
+            "page"
+          ],
+          "type": "object",
+          "properties": {
+            "totalRecords": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "recordsPerPage": {
+              "type": "integer",
+              "format": "int32",
+              "nullable": true
+            },
+            "page": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "next": {
+              "$ref": "#/components/schemas/EntitySearchQueryModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "EntitySearchQueryModel": {
+          "required": [
+            "page",
+            "recordsPerPage",
+            "search",
+            "sort"
+          ],
+          "type": "object",
+          "properties": {
+            "page": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "recordsPerPage": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "sort": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/EntitySearchSortModel"
+              }
+            },
+            "search": {
+              "$ref": "#/components/schemas/EntitySearchModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "EntitySearchSortModel": {
+          "required": [
+            "field",
+            "sort"
+          ],
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "sort": {
+              "$ref": "#/components/schemas/SortOrder"
+            }
+          },
+          "additionalProperties": false
+        },
+        "EntityStatus": {
+          "enum": [
+            "Active",
+            "Deleted"
+          ],
+          "type": "string"
+        },
+        "ErrorResponse": {
+          "required": [
+            "errorCode",
+            "links",
+            "metadata"
+          ],
+          "type": "object",
+          "properties": {
+            "errorCode": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string",
+              "nullable": true
+            },
+            "metadata": {
+              "type": "object",
+              "additionalProperties": { }
+            },
+            "links": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/Link"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "Link": {
+          "required": [
+            "href",
+            "method",
+            "rel"
+          ],
+          "type": "object",
+          "properties": {
+            "href": {
+              "type": "string"
+            },
+            "rel": {
+              "type": "string"
+            },
+            "method": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "OwnedDataSearchModel": {
+          "required": [
+            "ownerAirslipUserType",
+            "ownerEntityId",
+            "page",
+            "recordsPerPage",
+            "search",
+            "sort"
+          ],
+          "type": "object",
+          "properties": {
+            "ownerEntityId": {
+              "type": "string"
+            },
+            "ownerAirslipUserType": {
+              "$ref": "#/components/schemas/AirslipUserType"
+            },
+            "page": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "recordsPerPage": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "sort": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/EntitySearchSortModel"
+              }
+            },
+            "search": {
+              "$ref": "#/components/schemas/EntitySearchModel"
+            }
+          },
+          "additionalProperties": false
+        },
+        "OwnedSeriesSearchModel": {
+          "required": [
+            "endDate",
+            "ownerAirslipUserType",
+            "ownerEntityId",
+            "startDate"
+          ],
+          "type": "object",
+          "properties": {
+            "startDate": {
+              "type": "string"
+            },
+            "endDate": {
+              "type": "string"
+            },
+            "integrationId": {
+              "type": "string",
+              "nullable": true
+            },
+            "ownerEntityId": {
+              "type": "string"
+            },
+            "ownerAirslipUserType": {
+              "$ref": "#/components/schemas/AirslipUserType"
+            }
+          },
+          "additionalProperties": false
+        },
+        "OwnedSnapshotSearchModel": {
+          "required": [
+            "ownerAirslipUserType",
+            "ownerEntityId"
+          ],
+          "type": "object",
+          "properties": {
+            "ownerEntityId": {
+              "type": "string"
+            },
+            "ownerAirslipUserType": {
+              "$ref": "#/components/schemas/AirslipUserType"
+            }
+          },
+          "additionalProperties": false
+        },
+        "PeriodType": {
+          "enum": [
+            "Minute",
+            "Hour",
+            "Day",
+            "Week",
+            "Month",
+            "Year"
+          ],
+          "type": "string"
+        },
+        "SearchFilterModel": {
+          "required": [
+            "columnField",
+            "operatorValue"
+          ],
+          "type": "object",
+          "properties": {
+            "columnField": {
+              "type": "string"
+            },
+            "value": {
+              "nullable": true
+            },
+            "operatorValue": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "Series": {
+          "required": [
+            "data",
+            "metrics",
+            "name"
+          ],
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "metrics": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/TimelyMetric"
+              }
+            },
+            "data": {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "format": "double"
+              }
+            }
+          },
+          "additionalProperties": false
+        },
+        "SnapshotMetric": {
+          "required": [
+            "balance",
+            "timeStamp"
+          ],
+          "type": "object",
+          "properties": {
+            "timeStamp": {
+              "type": "integer",
+              "format": "int64"
+            },
+            "balance": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "additionalProperties": false
+        },
+        "SortOrder": {
+          "enum": [
+            "Asc",
+            "Desc"
+          ],
+          "type": "string"
+        },
+        "TimelyMetric": {
+          "required": [
+            "balance",
+            "description",
+            "period",
+            "periodType"
+          ],
+          "type": "object",
+          "properties": {
+            "period": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": {
+              "type": "string"
+            },
+            "balance": {
+              "type": "number",
+              "format": "double"
+            },
+            "periodType": {
+              "$ref": "#/components/schemas/PeriodType"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "securitySchemes": {
+        "Bearer": {
+          "type": "apiKey",
+          "description": "e.g Bearer Api_Key.\r\n\r\nRequests to the Airslip API are authenticated using the applications `Api_Key`. You can view and manage your credentials in the Airslip Dashboard.\r\n\r\nAn Api_Key provides connectivity to all authenticated Airslip API endpoints, so it is important to keep these credentials secure. Do not share your Api_Key in publicly accessible areas such as GitHub, client-side code, or easily accessible configuration settings.\r\n\r\nAuthentication is performed using Bearer Authentication. Your Api_Key should be sent as the token.\r\n\r\nAll requests should be made via HTTPS.",
+          "name": "Authorization",
+          "in": "header"
+        }
+      }
+    },
+    "security": [
+      {
+        "Bearer": [ ]
+      }
+    ],
+    "tags": [
+      {
+        "name": "Accounts",
+        "description": "A description for a group of APIs"
+      },
+      {
+        "name": "BankTransactions",
+        "description": "A description for a group of APIs"
+      },
+      {
+        "name": "Commerce",
+        "description": "A description for a group of APIs"
+      },
+      {
+        "name": "Report",
+        "description": "A description for a group of APIs"
+      },
+      {
+        "name": "Snapshot",
+        "description": "A description for a group of APIs"
+      }
+    ]
+  }
+  
+  
+  
