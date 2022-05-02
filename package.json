@@ -50,7 +50,7 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "mocha": "^9.0.1"
+    "mocha": "^10.0.0"
   },
   "repository": {
     "type": "git",
