@@ -12,7 +12,7 @@
     "lint.ejs": "npx ejs-lint source/_includes/slate.ejs",
     "make": "npx eleventy --input=source/*.md",
     "test": "npx mocha",
-    "build.sass": "npx sass --update --style compressed --no-source-map ./source/slate/css",
+    "build.sass": "sass --update --style compressed --no-source-map ./source/slate/css:./_site/slate/css",
     "build.sass.local": "cross-var npx sass --update --style compressed --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
     "build.sass.test": "cross-var npx sass --update --style expanded --no-source-map $SLATEDIR/slate/css:$SLATEDIR/slate/css",
     "build.11ty": "npx eleventy --input=./source/*.md",
@@ -22,6 +22,9 @@
     "debug": "DEBUG=Eleventy* npx eleventy --dryrun --input=source/*.md",
     "serve": "npm run build.sass && npx eleventy --input=source/*.md --serve --port=4567",
     "serve.local": "cross-var npm run build.sass.local && cross-var npx eleventy --input=$SLATEDIR/*.md --output=$SLATEDIR/_site --serve --port=4567"
+    "watch:sass": "npm run build.sass -- --watch",
+    "watch:eleventy": "eleventy --input=source --serve --port=4567",
+    "start": "npm-run-all --parallel watch:*"
   },
   "keywords": [
     "slate",
@@ -50,7 +53,8 @@
     "shelljs": "^0.8.4"
   },
   "devDependencies": {
-    "mocha": "^9.0.1"
+    "mocha": "^9.0.1",
+    "npm-run-all": "^4.1.5"
   },
   "repository": {
     "type": "git",

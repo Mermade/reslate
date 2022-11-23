@@ -14,10 +14,10 @@ function slugify(s) {
 
 module.exports = function(eleventyConfig) {
   const src = process.env.SLATEDIR || 'source';
-  eleventyConfig.addPassthroughCopy(src+"/slate/css/*.css");
   eleventyConfig.addPassthroughCopy(src+"/slate/js");
   eleventyConfig.addPassthroughCopy(src+"/slate/img");
   eleventyConfig.addPassthroughCopy(src+"/slate/fonts");
+  eleventyConfig.addWatchTarget(src+"/slate/css");
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.setLibrary("md",
     markdownIt({
@@ -26,6 +26,5 @@ module.exports = function(eleventyConfig) {
       typographer: true
     }).use(markdownItAnchor, {
         slugify: slugify
-    })
-  );
+    }));
 };
