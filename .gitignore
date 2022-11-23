@@ -2,4 +2,3 @@ node_modules/
 npm-debug.log
 _site/
 source/slate/js/lib/*.min.js
-source/slate/css/*.css
